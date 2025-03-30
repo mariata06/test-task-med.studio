@@ -51,12 +51,12 @@ block main
               code(class="language-pug").
                 +btn({text: "modal-feedback"})(data-open-modal="feedback")
           .uikit__component
-            p.uikit__text.uikit__text--class .modal \ .modal--success
-            +btn({text: "modal-success"})(data-open-modal="success")
+            //- p.uikit__text.uikit__text--class .modal \ .modal--success
+            //- +btn({text: "modal-success"})(data-open-modal="success")
             pre
               |
-              code(class="language-pug").
-                +btn({text: "modal-success"})(data-open-modal="success")
+              //- code(class="language-pug").
+                //- +btn({text: "modal-success"})(data-open-modal="success")
 
         //- Кнопки
         section.uikit__section(id="buttons")
@@ -186,4 +186,4 @@ block modals
   +modal("modal--feedback")(data-modal="feedback")
     +modal-feedback()
   +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
-    +modal-success()
+    //- +modal-success()

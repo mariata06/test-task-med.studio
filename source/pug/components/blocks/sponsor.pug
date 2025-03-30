@@ -1,0 +1,16 @@
+mixin sponsor()
+  .sponsor
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      h2.title.title--h3.sponsor__title Генеральные спонсоры
+      .sponsor__container
+        .sponsor__card
+          .sponsor__logo.sp-logo.sp-logo--violet
+            +img("content", "logo-dr.reddys", "png", 184, 184, "Dr.Reddy's")
+          .sponsor__tooltip.tooltip Dr. Reddy's — индийская фармацевтическая компания, специализирующаяся на разработке и производстве лекарств и активных фармацевтических ингредиентов. Компания известна своими генерическими препаратами, которые помогают снизить стоимость лечения для пациентов по всему миру
+
+        .sponsor__card
+          .sponsor__logo.sp-logo.sp-logo--blue
+            +icon("logo-philips", "181", "36")
+          .sponsor__tooltip.tooltip Philips — голландская международная корпорация, занимающаяся разработкой инновационных технологий и решений в различных областях, включая здравоохранение, освещение, потребительскую электронику и бытовую технику

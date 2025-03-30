@@ -1,0 +1,20 @@
+mixin speaker()
+  .speaker(data-scroll-target="speaker")
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      h2.title.title--h3.speaker__title Спикеры
+      .speaker__container
+        .speaker__card
+          .speaker__photo
+            +img("content", "konstantinopolskiy", "png", 184, 184, "Konstantinopolskiy")
+          .speaker__author
+            h3.title.title--h3.speaker__name Константинопольский Константин Константинович
+            p.speaker__position Главный внештатный специалист Минздрава России по управлению сестринской деятельностью, главная медицинская сестра ФГБУ «HMXЦ им. Н.И. Пирогова» Минздрава России, доцент кафедры управления сестринской деятельностью и социальной работы Первого МГМУ им. И.М. Сеченова, к.м.н.
+
+        .speaker__card
+          .speaker__photo
+            +img("content", "eliseeva", "png", 184, 184, "Eliseeva")
+          .speaker__author
+            h3.title.title--h3.speaker__name Елисеева Дарья Дмитриевна
+            p.speaker__position Главный внештатный специалист Минздрава России по управлению сестринской деятельностью, главная медицинская сестра ФГБУ «HMXЦ им. Н.И. Пирогова»

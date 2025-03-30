@@ -1,0 +1,32 @@
+.sp-logo {
+  border-radius: 20px;
+  // width: 584px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+
+  &--violet {
+    background-color: #3F1F81;
+  }
+
+  &--blue {
+    background-color: #0B5ED8;
+  }
+
+  img {
+    // width: 480px;
+    // height: 209px;
+    // object-fit: cover;
+    object-fit: contain;
+    transform: scale(2);
+  }
+}
+
+@media (max-width: 450px) {
+  .sp-logo img {
+    object-fit: contain;
+    transform: scale(1.5);
+  }
+}

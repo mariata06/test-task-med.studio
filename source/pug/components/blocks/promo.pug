@@ -1,0 +1,24 @@
+mixin promo()
+  .promo
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+
+      .promo__text
+        h1.title--h1.title.promo__title <small>Подарок</small> Даём скидку 10% за просмотр материала партнёров
+
+        p.promo__paragraph Зенитное часовое число, как бы это ни казалось парадоксальным, притягивает случайный Ганимед. Как было показано выше, природа гамма-всплексов вызывает болид.
+
+      .promo__video
+        .promo__discount
+          +icon("icon-star", 136, 136)
+          .promo__discount-wrapper Скидка
+            span.promo__discount-value 10%
+        video(autoplay muted loop poster="img/content/promo_img.png")
+          //- source(src="video.mp4" type="video/mp4")
+          //- source(src="video.webm" type="video/webm")
+          | Ваш браузер не поддерживает видео.
+        button.btn.btn--play
+          +icon("icon-play", 133, 133)
+
+

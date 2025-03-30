@@ -5,6 +5,7 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
+  z-index: 10000;
 
   display: flex;
   flex-direction: column;
@@ -56,6 +57,7 @@
 
   &__content {
     position: relative;
+    border-radius: 20px;
 
     width: 600px;
     padding: 40px;
@@ -105,13 +107,13 @@
     }
   }
 
-  &--no-scale {
-    transform: none;
-  }
+  // &--no-scale {
+  //   transform: none;
+  // }
 
-  &--preload {
-    transition: none;
-  }
+  // &--preload {
+  //   transition: none;
+  // }
 
   &.is-active {
     transform: scale(1);
@@ -119,5 +121,160 @@
     opacity: 1;
 
     pointer-events: auto;
+  }
+}
+
+.modal-cta .title--h4 {
+  font-size: 30px;
+  line-height: 40px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+// .modal-cta {
+//   background-color: #fff;
+//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+//   width: 376px;
+//   padding: 24px;
+//   // right: 116px;
+//   // right: 0;
+//   border-radius: 20px;
+//   z-index: 900;
+//   transition: top 0.3s ease-in-out,
+//   transform 0.3s ease-in-out;
+// }
+
+// .modal-cta {
+//   &.fixed {
+//     position: fixed;
+//     top: 50%;
+//     transform: translateY(-50%);
+//   }
+// }
+
+.modal-cta .modal__wrapper,
+.modal-cta .modal__content {
+  width: unset;
+  padding: 0;
+}
+
+.modal-cta .modal__overlay {
+  position: unset;
+  width: 0;
+}
+
+.modal-cta__course-price {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.modal-cta__link.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  margin-top: 16px;
+  height: 24px;
+  padding: 0;
+  align-items: center;
+
+  .green-text {
+    color: #40B526;
+  }
+}
+
+.modal-cta {
+  background-color: #fff;
+  // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 376px;
+  padding: 24px;
+  border-radius: 20px;
+  z-index: 900;
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out;
+  // display: none;
+  position: fixed;
+  position: sticky;
+  // right: 0;
+  // top: 0;
+  top: 25%;
+  // top: 855px;
+  // transform: translateY(-50%);
+  margin-left: auto;
+
+  &__description {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+}
+
+// .modal-cta.fixed {
+//   // position: fixed;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+@media (max-width: 1023px) {
+  .intro__tab-details {
+    position: relative;
+  }
+  .modal-cta {
+    position: absolute;
+    top: 0;
+    // top: 48px;
+    // right: 24px;
+    right: 0;
+    // width: 350px;
+    padding: 16px;
+    transform: scale(0.8);
+    transform-origin: top right;
+  }
+
+  .modal-cta__course-price {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+
+}
+
+@media (max-width: 767px) {
+  .intro__tab-details {
+    position: relative;
+  }
+  .modal-cta {
+    position: absolute;
+    // top: 0;
+    // top: 48px;
+    // right: 24px;
+    width: 350px;
+    padding: 16px;
+    transform: scale(0.7);
+    top: 0;
+    right: 0;
+    transform: scale(0.7);
+    /* Увеличение элемента */
+    transform-origin: top right;
+  }
+}
+
+@media (max-width: 550px) {
+  .modal-cta {
+    margin-left: unset;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 20px;
+    transform: scale(0.8);
+    transform-origin: unset;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal-cta {
+    width: 100%;
+    transform: scale(0.9);
   }
 }

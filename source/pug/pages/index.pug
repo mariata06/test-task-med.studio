@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Test task Med.test" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
@@ -14,5 +14,17 @@ block main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
     +intro()
+    +promo()
+    +speaker()
+    +sponsor()
+    +partners()
 
 block modals
+  //- +modal("modal--feedback")(data-modal="feedback")
+  //-   +modal-feedback()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="payment")
+    +modal-payment()
+  //- +modal("modal--cta modal--no-scale modal--fit-content")(data-modal="cta")
+  //-   +modal-cta()
+  //- +modal("modal-cta modal--no-scale modal--fit-content")(data-modal="cta")
+  //- +modal-cta()

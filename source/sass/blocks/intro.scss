@@ -1,0 +1,579 @@
+.intro {
+  // background-color: #fff;
+  padding-bottom: 65px;
+    background-color: #F3F7F9;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn-container {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 34px;
+    padding-left: 0;
+  }
+
+  &__tab {
+    position: relative;
+    min-height: 584px;
+  }
+
+  &__tab-preview {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  &__tab-bg {
+    height: 584px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // background-color: rgba(255, 255, 255, 0.5);
+      /* Полупрозрачность */
+    // backdrop-filter: blur(30px);
+    animation: animate-bg 10s infinite ease-in-out;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  @keyframes animate-bg {
+    0% {
+      transform: scale(1.2) rotate(0deg) translateX(0) translateY(0);
+    }
+
+    25% {
+      transform: scale(1.4) rotate(10deg) translateX(5px) translateY(-5px);
+    }
+
+    50% {
+      transform: scale(1.4) rotate(-10deg) translateX(-5px) translateY(5px);
+    }
+
+    75% {
+      transform: scale(1.4) rotate(10deg) translateX(5px) translateY(-5px);
+    }
+
+    100% {
+      transform: scale(1.2) rotate(0deg) translateX(0) translateY(0);
+    }
+  }
+
+  &__backdrop-filter {
+    // background-color: rgba(255, 255, 255, 0.5);
+    /* Полупрозрачность */
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    // backdrop-filter: blur(30px);
+    // animation: blurMove 8s infinite alternate ease-in-out;
+    animation: blurMove 5s infinite alternate ease-in-out;
+  }
+
+  @keyframes blurMove {
+    0% {
+      // backdrop-filter: blur(10px);
+      backdrop-filter: blur(0px);
+      background-position: 50% 50%;
+    }
+
+    25% {
+      // backdrop-filter: blur(40px);
+      backdrop-filter: blur(5px);
+      background-position: 52% 48%;
+    }
+
+    50% {
+      // backdrop-filter: blur(50px);
+      backdrop-filter: blur(10px);
+      background-position: 55% 46%;
+    }
+
+    75% {
+      // backdrop-filter: blur(40px);
+      backdrop-filter: blur(5px);
+      background-position: 52% 48%;
+    }
+
+    100% {
+      backdrop-filter: blur(10px);
+      background-position: 50% 50%;
+    }
+  }
+
+  &__tab-summary {
+    width: 100%;
+    height: 100%;
+    height: 584px;
+    padding: 47px 42px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__course-info {
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 32px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    flex-wrap: wrap;
+
+    li {
+      margin-right: 24px;
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 6px;
+        color: #fff;
+      }
+    }
+
+    li:first-child {
+      background-color: #fff;
+      padding: 0 10px;
+      border-radius: 100px;
+      color: #252D33;
+    }
+  }
+
+  &__logo {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    svg {
+      margin-right: 11px;
+    }
+  }
+
+  &__tab-title {
+    width: 700px;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    img {
+      align-self: flex-end;
+      // transition: transform 0.3s ease;
+      // transition: transform 0.4s ease, filter 0.4s ease;
+      //   will-change: transform;
+    }
+    img:hover {
+      // transform: translateX(10px) translateY(10px);
+        /* Логотип сдвигается при наведении */
+    }
+  }
+
+  // &__title-wrapper:hover img {
+  //   transform: translate(-15px, -15px) scale(1.1);
+  //     /* Логотип двигается и увеличивается */
+  //     filter: brightness(1.2);
+  //     /* Добавляем эффект яркости при наведении */
+  // }
+
+  &__tab-btn.btn--white-border {
+    margin-right: 24px;
+  }
+
+  &__tab-btns-top {
+    margin-bottom: auto;
+  }
+
+  &__tab-btns-bottom {
+    display: flex;
+  }
+
+  &__tab-btns {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tab-summary {
+    z-index: 1000;
+    position: relative;
+  }
+
+  &__tab-details {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  // &__tab-paragraph,
+  // &__course-program {
+  //   width: 776px;
+  // }
+
+  &__tab-desc {
+    width: 776px;
+  }
+
+  &__tabs {
+    position: relative;
+    z-index: 8000;
+  }
+
+  &__tab {
+    display: none;
+    width: 100%;
+    // position: absolute;
+    // top: 10px;
+    left: 0;
+    // margin-top: 10px;
+    // opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 0;
+  }
+
+  &__tab.active {
+    display: block;
+    position: relative;
+    transform: translateY(0);
+    z-index: 1;
+    pointer-events: auto;
+    // opacity: 1;
+  }
+}
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// .intro__course-content {
+//   display: none;
+//   opacity: 0;
+//   transform: translateY(-10px);
+//   transition: opacity 0.3s ease, transform 0.3s ease;
+// }
+
+.intro__course-content.open {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro__course-part {
+  cursor: pointer;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  margin: 0;
+  margin-bottom: 5px;
+
+  .icon-drop-down {
+    margin-left: 12px;
+  }
+}
+
+.intro__course-part-name {
+  margin: 0;
+}
+
+.icon-drop-down {
+  transition: transform 0.3s ease;
+}
+
+.intro__course-part.active .icon-drop-down {
+  transform: rotate(180deg);
+}
+
+/* Скрываем контент аккордеона по умолчанию */
+.intro__course-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Открытый аккордеон */
+.intro__course-acordeon.open .intro__course-content {
+  max-height: 1000px;
+  /* Достаточно большое значение для вместимости контента */
+  opacity: 1;
+}
+
+/* Стили для заголовков аккордеонов */
+.intro__course-part {
+  cursor: pointer;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  padding-left: 0;
+  // background: #f5f5f5;
+  // border: 1px solid #ddd;
+  transition: background 0.2s ease;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.intro__course-part:hover {
+  background: #eaeaea;
+}
+
+/* Иконка стрелки */
+.icon-drop-down {
+  transition: transform 0.3s ease;
+}
+
+/* Анимация поворота стрелки при открытии */
+.intro__course-acordeon.open .icon-drop-down {
+  transform: rotate(180deg);
+}
+
+.intro__course-lecture {
+  display: flex;
+  // flex-direction: column;
+  margin-bottom: 40px;
+  align-items: center;
+
+  .btn--play {
+    display: none;
+  }
+}
+
+.intro__course-lecture.open {
+
+  .btn--play {
+    display: block;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+  }
+
+  .icon-video {
+    display: none;
+  }
+}
+
+.intro__course-lecture-wrapper {
+  position: relative;
+  align-self: baseline;
+  min-width: 120px;
+  margin-right: 24px;
+}
+
+.intro__course-lecture-wrapper .icon-video {
+  position: absolute;
+  right: 8px;
+  bottom: 4px;
+}
+
+.intro__course-lecture img {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.intro__course-results {
+  padding: 20px 24px;
+  border: 1px solid #94A9B7;
+  border-radius: 20px;
+  margin-top: 10px;
+
+  .intro__course-part {
+    svg {
+      min-width: 36px;
+      min-height: 36px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.intro__course-note {
+  color: #94A9B7;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.intro__tab-summary .intro__course-info {
+  color: #fff;
+}
+
+.intro__course-info {
+  color: #252D33;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 0;
+
+  li {
+    margin-right: 32px;
+    margin-bottom: 10px;
+  }
+
+  li svg {
+    margin-right: 10px;
+    color: #3B64A1;
+  }
+}
+
+.intro__tab-summary .intro__course-info li svg {
+  color: #fff;
+}
+
+// Параллакс на Лого Orto
+.logo {
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateX(10px) translateY(10px);
+  /* Логотип сдвигается при наведении */
+}
+
+@media (max-width: 1279px) {
+  .intro__tab-desc {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .intro__tab-desc {
+    width: 100%;
+  }
+
+  .intro__tab-paragraph {
+    width: 50%;
+    width: 55%;
+    margin-bottom: 50px;
+  }
+  .intro__tab-title {
+    font-size: 44px;
+    line-height: 52px;
+  }
+  .intro__tab-summary {
+    padding: 24px;
+  }
+  .intro__title-wrapper img {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 767px) {
+  .intro__tab-paragraph {
+    width: 50%;
+  }
+
+  .intro__tab-title {
+    // width: 700px;
+    font-size: 40px;
+    line-height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .intro__title-wrapper {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .intro__title-wrapper img {
+    align-self: baseline;
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+
+  .intro__tab-summary {
+    padding: 16px;
+  }
+
+  .intro__tab-btn {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .intro__tab-paragraph {
+    width: 100%;
+  }
+
+  .intro__tab-details {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  .intro__course-lecture {
+    flex-direction: column;
+    align-items: baseline;
+    margin-bottom: 20px;
+  }
+  .intro__tab-title {
+    font-size: 24px;
+    line-height: 26px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .intro__tab-btns-top,
+  .intro__tab-btns-bottom {
+    flex-wrap: wrap;
+    // margin-bottom: 10px;
+
+    .btn {
+      margin-bottom: 10px;
+    }
+  }
+
+  .intro__course-part {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .intro__course-results {
+    padding: 16px;
+  }
+  .intro__course-info li {
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .intro__tab-title {
+    font-size: 24px;
+    line-height: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .intro__logo {
+    margin-bottom: 16px;
+  }
+
+  .intro__course-info li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}

@@ -16,3 +16,39 @@
   font-display: swap;
   src: url("../fonts/.woff2") format("woff2");
 }
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "ptrootui-regular";
+
+  font-display: swap;
+  src: url("../fonts/ptrootui-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "ptrootui-regular";
+
+  font-display: swap;
+  src: url("../fonts/ptrootui-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "ptrootui-bold";
+
+  font-display: swap;
+  src: url("../fonts/ptrootui-bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "ptrootui-bold";
+
+  font-display: swap;
+  src: url("../fonts/ptrootui-bold.woff2") format("woff2");
+}

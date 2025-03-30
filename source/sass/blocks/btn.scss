@@ -1,6 +1,7 @@
 .btn {
   display: inline-flex;
   padding: 10px 20px;
+  font-family: "ptrootui-bold";
 
   color: $color-default-white;
 
@@ -23,4 +24,147 @@
   @include hover-focus {
     opacity: 0.8;
   }
+
+  &--play {
+    background-color: transparent;
+    border-radius: 200px;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--tab {
+    background-color: transparent;
+    font-family: "ptrootui-bold";
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0%;
+    color: #252D33;
+    transition: 0.3s;
+    padding: 10px 16px;
+  }
+
+  &--tab.active {
+    color: #94A9B7;
+    // cursor: pointer;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &--white-border {
+    border: 1px solid #fff;
+    border-radius: 100px;
+    background-color: transparent;
+    font-family: "ptrootui-bold";
+  }
+
+  &--white-border.btn--credit-card {
+    min-height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    // padding: unset;
+    min-width: 189px;
+    font-family: "ptrootui-bold";
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  &--black-bg {
+    background-color: #252D33;
+    border-radius: 100px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 129px;
+    margin-right: 193px;
+    font-family: "ptrootui-bold";
+  }
+
+  &--green-bg {
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    background-color: #40B526;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    border-radius: 100px;
+    width: 100%;
+    font-family: "ptrootui-bold";
+
+    svg {
+      margin-right: 11px;
+    }
+  }
+
+  &--green-text {
+    font-family: "ptrootui-bold";
+  }
+}
+
+@media (max-width: 1023px) {
+  .btn--tab {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .btn--play {
+    // width: 100px;
+    // height: 100px;
+    // padding: 0;
+
+    // svg {
+    //   width: 100px;
+    //   height: 100px;
+    // }
+  }
+}
+
+@media (max-width: 767px) {
+  .btn--tab {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .btn--white-border.btn--credit-card {
+    min-height: 40px;
+  }
+  .btn--black-bg {
+    background-color: #252D33;
+    border-radius: 100px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 129px;
+    margin-right: 193px;
+    font-family: "ptrootui-bold";
+  }
+}
+
+@media (max-width: 450px) {
+  .btn {
+    padding: 5px 15px;
+  }
+  .btn--black-bg {
+  height: 36px;
+  }
+  .btn--white-border.btn--credit-card {
+    min-height: 36px;
+  }
+    .btn--tab.btn {
+      font-size: 24px;
+      line-height: 34px;
+      padding: 5px 5px;
+    }
 }

@@ -3,34 +3,103 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "index.html",
-        text: "Главная"
+        text: "Расписание"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Курсы"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Проекты"
       },
+      {
+        href: "#",
+        text: "Медиатека",
+        dropdown: [
+          { href: "#lectures", text: "Лекции" },
+          { href: "#seminars", text: "Семинары" },
+          { href: "#conferences", text: "Конференции" }
+        ]
+      },
+      {
+        href: "#",
+        text: "О проекте",
+        dropdown: [
+          { href: "#about-us", text: "О нас" },
+          { href: "#contacts", text: "Контакты" },
+          { href: "#vacancies", text: "Вакансии" }
+        ]
+      },
+      //- {
+      //-   href: "#",
+      //-   text: "О проекте",
+      //-   dropdown: [
+      //-     { href: "#about-us", text: "О нас" },
+      //-     { href: "#contacts", text: "Контакты" },
+      //-     { href: "#vacancies", text: "Вакансии" }
+      //-   ]
+      //- },
+      //- {
+      //-   href: "#",
+      //-   text: "О проекте",
+      //-   dropdown: [
+      //-     { href: "#about-us", text: "О нас" },
+      //-     { href: "#contacts", text: "Контакты" },
+      //-     { href: "#vacancies", text: "Вакансии" }
+      //-   ]
+      //- },
     ]
 
   header.header(class=headerMods)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        span.header__logo
+          +icon("main-logo", 112, 32)
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +icon("main-logo", 112, 32)
       nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
+          //- +icon("icon-burger", 20, 20)
+          span
+          span
+          span
         .main-nav__wrapper
           ul.main-nav__list
             each link in headerLinks
-              - const activeState = currentUrl === link.href
+              //- - const activeState = currentUrl === link.href
               li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
+                if link.dropdown
+                  // Выпадающий список для Медиатеки и О проекте
+                  span.main-nav__link
+                    = link.text
+                    +icon("icon-drop-down", 11, 7).icon-drop-down
+                  .dropdown-menu
+                    ul
+                      each item in link.dropdown
+                        li
+                          a(href=item.href)= item.text
                 else
-                  a.main-nav__link(href=link.href)= link.text
+                  - const activeState = currentUrl === link.href
+                  if(activeState)
+                    span.main-nav__link.is-active= link.text
+                  else
+                    a.main-nav__link(href=link.href)= link.text
+
+          a.main-nav__link.ms-club-link(href="#") MS
+            span CLUB
+
+        .main-nav__account
+
+          span.main-nav__link Личный кабинет
+            +icon("icon-drop-down", 11, 7).icon-drop-down
+          .dropdown-menu
+            ul
+              li
+                a(href="#") Зарегистрироваться
+              li
+                a(href="#") Войти
+
+

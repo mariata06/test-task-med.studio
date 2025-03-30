@@ -1,10 +1,100 @@
 mixin intro()
-  .intro
-    //- вставлять блоки во внешний контейнер неверно
-    //- все блоки содержат в себе container без доп класса tutorial__wrapper
-    .container
-      p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
 
-      p(style="margin-top: 40px;") Пример использования +img()
-      p(style="margin-bottom: 40px;")
-        +img("content", "placeholder", "png", 120, 120, "Пример")
+  -
+    const courseParts = [
+      { title: "Часть 1. Теоретическая часть", id: "part-1" },
+      { title: "Часть 2. Практическая часть", id: "part-2" },
+      { title: "Часть 3. Финал", id: "part-3" }
+    ]
+
+  -
+    const lectures = [
+      { img: "video-1", title: "Лекция 1. Что такое резекция лазером и в чём преимущество энтервектоскопии для лечения бесплодия", icon: "icon-lock" },
+      { img: "video-2", title: "Лекция 2. Энтервектоскопия как базовый метод лечения гемангиомы Шлейна", icon: "icon-lock" },
+      { img: "video-3", title: "Лекция 3. Проведение прокралификации кожи при завершении энтервектоскопии и дальнейшее симптоматическое лечение", icon: "icon-lock" },
+      { img: "video-4", title: "Онлайн-трансляция со всеми спикерами", icon: "icon-globe" }
+    ]
+
+  .intro
+    .container
+      div.intro__tabs
+        .intro__btn-container
+          each tab, i in ['Описание', 'Обучение', 'Чат', 'Документы и оплата']
+            button.btn.btn--tab(data-tab=i class=(i === 0 ? 'active' : ''))= tab
+
+        each tab, i in [0, 1, 2, 3]
+          .intro__tab(data-content=i class=(i === 0 ? 'active fade-in' : ''))
+            .intro__tab-content
+              .intro__tab-preview
+                .intro__tab-bg
+                  +img("content", "intro-bg", "png", "1208", "584", "Пример")
+                .intro__backdrop-filter
+                .intro__tab-summary
+                  .intro__logo
+                    +icon("nmo-logo", 38, 38)
+                    span +36
+                  ul.intro__course-info
+                    li новый поток
+                    li с 25 августа
+                    li
+                      +icon("icon-knowledge", 22, 22)
+                      | 12 модулей
+                    li
+                      +icon("icon-clock", 22, 22)
+                      | 40 ак. часов
+                  .intro__title-wrapper
+                    h1.title.title--h1.intro__tab-title Лечение острых вирусных инфекций методом энтервектоскопии
+                    +img("content", "logo-orto", "png", "258", "81", "Пример")
+                  .intro__tab-btns
+                    .intro__tab-btns-top
+                      a(href="#" data-scroll-to="program").btn.btn--white-border.intro__tab-btn.scroll-link программа курса
+                      a(href="#" data-scroll-to="speaker").btn.btn--white-border.intro__tab-btn.scroll-link спикеры
+                    .intro__tab-btns-bottom
+                      button.btn.btn--black-bg.intro__tab-btn Зарегистрироваться на&nbsp;курс
+                      button.btn.btn--white-border.btn--credit-card.intro__tab-btn(data-open-modal="payment")
+                        +icon("icon-credit-card", 22, 22)
+                        | Оплатить курс
+              .intro__tab-details(data-scroll-target="program")
+                .intro__tab-desc
+
+                  .intro__tab-paragraph
+                    | Зенитное часовое число, как бы это ни казалось парадоксальным, притягивает случайный Ганимед. Как было показано выше, природа гамма-всплесков вызывает болид.
+                    | Вселенная достаточно огромна, чтобы аномальная джетовая активность последовательно оценила центральный параметр. Нулевой меридиан представляет собой далекий математический горизонт.
+                    | Хотя хронологи не уверены, им кажется, что декретное время вызывает лимб. У планет-гигантов нет твёрдой поверхности, таким образом, астероид прочно оценивает натуральный логарифм.
+
+                  .intro__course-program
+                    h2.title.title--h2.intro__course-title Программа курса
+
+                    each part in courseParts
+                      .intro__course-acordeon(data-accordion, id=part.id class=(part.id === "part-1" ? "open" : ""))
+                        h3.title.title--h3.intro__course-part
+                          = part.title
+                          +icon("icon-drop-down", 11, 7).icon-drop-down
+                        .intro__course-content
+
+                          each lecture, i in lectures
+                            .intro__course-lecture(class=(i === 0 && part.id === 'part-1' ? 'open' : ''))
+                              .intro__course-lecture-wrapper
+                                +img("content", lecture.img, "png", "120", "72", "лекция урока")
+                                +icon(lecture.icon, 23, 29).icon-video
+                                button.btn.btn--play
+                                  +icon('icon-play', 32, 32)
+                              h4.title.title--h4.intro__course-part-name= lecture.title
+
+                    .intro__course-results
+                      .intro__course-note доступно после прохождения курса
+                      h3.title.title--h3.intro__course-part
+                        +icon("icon-award", 36, 36)
+                        | Часть 4. Итоговый контроль
+                      ul.intro__course-info
+                        li
+                          +icon("icon-question", 22, 22)
+                          | Вопросов: 30
+                        li
+                          +icon("icon-clock", 22, 22)
+                          | Время: 60 мин
+                        li
+                          +icon("icon-sync", 22, 22)
+                          | Попыток: 2
+
+                +modal-cta()
