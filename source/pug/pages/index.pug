@@ -5,14 +5,12 @@ block variables
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
-  - const hasFooter = true
+  - const hasFooter = false
   - const footerMods = ""
   - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
 block main
   main
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
     +intro()
     +promo()
     +speaker()
@@ -20,11 +18,5 @@ block main
     +partners()
 
 block modals
-  //- +modal("modal--feedback")(data-modal="feedback")
-  //-   +modal-feedback()
   +modal("modal--success modal--no-scale modal--fit-content")(data-modal="payment")
     +modal-payment()
-  //- +modal("modal--cta modal--no-scale modal--fit-content")(data-modal="cta")
-  //-   +modal-cta()
-  //- +modal("modal-cta modal--no-scale modal--fit-content")(data-modal="cta")
-  //- +modal-cta()

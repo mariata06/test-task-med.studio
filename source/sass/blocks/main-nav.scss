@@ -20,7 +20,6 @@
   }
 
   &__link {
-    // color: $color-default-white;
     color: #252D33;
 
     &.is-active {
@@ -67,15 +66,9 @@
 
 @media (max-width: 767px) {
   .main-nav {
-    // flex-direction: column-reverse;
-    // width: 30%;
     margin-left: auto;
-    // flex-direction: column-reverse;
     align-items: flex-end;
     flex-wrap: wrap;
-    // border-radius: 20px;
-    // box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
-    // padding: 16px;
     align-self: baseline;
   }
 
@@ -94,28 +87,21 @@
     top: 70px;
     top: 35px;
     visibility: hidden;
-    // right: -100%;
     right: 0;
-    /* Начальное положение за пределами экрана */
     width: 250px;
     width: auto;
-    // height: 100vh;
     background-color: white;
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
-    // transition: right 0.3s ease-in-out;
-    // transition: visibility 0.3s ease-in-out;
     padding: 20px;
     z-index: 10000;
     display: none;
   }
 
   .main-nav__wrapper.open {
-    // right: 0;
     visibility: visible;
     display: block;
   }
   .main-nav__toggle {
-    // display: block;
     order: 1;
     width: 30px;
     height: 20px;
@@ -136,7 +122,6 @@
     }
   }
 
-  /* Открытое меню (крест) */
   .main-nav__toggle.open span:nth-child(1) {
     transform: translateY(5px) rotate(45deg);
   }

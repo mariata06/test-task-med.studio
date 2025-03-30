@@ -4,23 +4,7 @@
   display: inline-block;
   cursor: pointer;
   transition: all 0.3s ease-out;
-
-  &:hover {
-    // opacity: 0.8;
-    // background-color: inherit;
-    // color: inherit;
-  }
 }
-
-// .partners__card:hover>*:not(.tooltip),
-// .sponsor__card:hover>*:not(.tooltip) {
-//   opacity: 1;
-//   /* Отменяем изменение прозрачности */
-//   // background-color: transparent;
-//   /* Отменяем изменение фона */
-//   color: inherit;
-//   /* Сохраняем оригинальный цвет */
-// }
 
 .partners__card,
 .sponsor__card {
@@ -28,13 +12,8 @@
   display: inline-block;
   cursor: pointer;
   transition: all 0.3s ease-out;
-
-  &:hover {
-    // opacity: 0.8;
-  }
 }
 
-/* Отключаем ховер на тултипе */
 .partners__card:hover .tooltip,
 .sponsor__card:hover .tooltip {
   pointer-events: auto;
@@ -59,7 +38,6 @@
   transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
-/* Когда тултип видим, делаем его видимым */
 .tooltip.visible {
   opacity: 1;
   visibility: visible;
@@ -77,115 +55,3 @@
   border-color: #fff transparent transparent transparent;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
 }
-
-// .partners__card,
-// .sponsor__card {
-//   position: relative;
-//   display: inline-block;
-//   cursor: pointer;
-//   transition: all 0.3s ease-out;
-// }
-
-// .partners__card:hover,
-// .sponsor__card:hover {
-//   opacity: 0.8;
-//   background-color: inherit;
-//   color: inherit;
-// }
-
-// /* Сбрасываем наследуемую прозрачность */
-// .partners__card:hover .tooltip,
-// .sponsor__card:hover .tooltip {
-//   opacity: 1 !important;
-//   visibility: visible;
-//   pointer-events: auto;
-// }
-
-// .tooltip {
-//   position: absolute;
-//   bottom: 115%;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   background: #fff;
-//   color: #333;
-//   padding: 8px 12px;
-//   border-radius: 4px;
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//   font-size: 12px;
-//   line-height: 14px;
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-//   pointer-events: none;
-// }
-
-// .tooltip.visible {
-//   opacity: 1 !important;
-//   visibility: visible;
-//   pointer-events: auto;
-// }
-
-// .tooltip::after {
-//   content: "";
-//   position: absolute;
-//   top: 100%;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   border-width: 10px;
-//   border-style: solid;
-//   border-color: #fff transparent transparent transparent;
-//   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
-// }
-
-// .partners__card,
-// .sponsor__card {
-//   position: relative;
-//   display: inline-block;
-//   cursor: pointer;
-//   transition: all 0.3s ease-out;
-// }
-
-// .partners__card:hover,
-// .sponsor__card:hover {
-//   opacity: 0.8;
-//   background-color: inherit;
-//   color: inherit;
-// }
-
-// /* Скрываем тултип по умолчанию */
-// .tooltip {
-//   position: absolute;
-//   bottom: 115%;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   background: #fff;
-//   color: #333;
-//   padding: 8px 12px;
-//   border-radius: 4px;
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//   font-size: 12px;
-//   line-height: 14px;
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-//   pointer-events: none;
-// }
-
-// /* Показываем тултип, если он активен (кликнут) */
-// .tooltip.visible {
-//   opacity: 1 !important;
-//   visibility: visible;
-//   pointer-events: auto;
-// }
-
-// .tooltip::after {
-//   content: "";
-//   position: absolute;
-//   top: 100%;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   border-width: 10px;
-//   border-style: solid;
-//   border-color: #fff transparent transparent transparent;
-//   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
-// }

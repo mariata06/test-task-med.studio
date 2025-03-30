@@ -12,8 +12,6 @@
   &__logo {
     color: $color-default-white;
   }
-
-  // display: none;
 }
 
 .dropdown-menu ul {
@@ -22,7 +20,6 @@
   margin: 0;
 }
 
-/* Скрытие выпадающего меню по умолчанию */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -30,7 +27,6 @@
   left: 0;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  // z-index: 10000;
   z-index: 9000;
   padding: 10px;
   border-radius: 5px;
@@ -42,7 +38,6 @@
   display: block;
 }
 
-/* Стили для стрелочки */
 .icon-drop-down {
   transition: transform 0.3s ease;
 }
@@ -51,7 +46,6 @@
   transform: rotate(180deg);
 }
 
-/* Стили для элементов меню */
 .main-nav__item, .main-nav__account {
   position: relative;
 }

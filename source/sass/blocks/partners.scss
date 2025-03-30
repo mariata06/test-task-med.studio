@@ -14,7 +14,6 @@
   }
 
   &__container {
-    // grid-template-columns: (3, fr);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
@@ -28,42 +27,7 @@
 
 .partners__card {
   width: 100%;
-  // min-width: 376px;
 }
-
-// .partners__logo {
-//   position: relative;
-//   // display: inline-block;
-//   cursor: pointer;
-// }
-
-// .partners__logo::after {
-//   content: attr(data-tooltip);
-//   /* Получает текст из data-tooltip */
-//   position: absolute;
-//   bottom: 110%;
-//   /* Размещаем тултип сверху */
-//   left: 50%;
-//   transform: translateX(-50%);
-//   background: rgba(0, 0, 0, 0.8);
-//   color: white;
-//   padding: 8px 12px;
-//   border-radius: 5px;
-//   font-size: 12px;
-//   line-height: 14px;
-//   // white-space: nowrap;
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: opacity 0.2s ease-in-out;
-//   width: 200px;
-// }
-
-// .partners__logo:hover::after {
-//   opacity: 1;
-//   visibility: visible;
-// }
-
-
 
 @media (max-width: 767px) {
   .partners__container {

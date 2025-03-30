@@ -3,10 +3,8 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 116px;
-  // border: 1px solid green;
 
   @include vp-1439 {
-    // padding: 0 32px;
     padding: 0 80px;
   }
 
@@ -19,13 +17,11 @@
   }
 
   &--modal-cta {
-    // min-height: 368px;
     height: 100%;
     position: absolute;
     top: 855px;
     left: 50%;
     transform: translateX(-50%);
-    // background-color: pink;
     display: none;
   }
 }

@@ -1,5 +1,4 @@
 .intro {
-  // background-color: #fff;
   padding-bottom: 65px;
     background-color: #F3F7F9;
 
@@ -10,7 +9,6 @@
 
   &__btn-container {
     display: flex;
-    // justify-content: space-between;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 34px;
@@ -36,9 +34,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    // background-color: rgba(255, 255, 255, 0.5);
-      /* Полупрозрачность */
-    // backdrop-filter: blur(30px);
     animation: animate-bg 10s infinite ease-in-out;
 
     img {
@@ -71,8 +66,6 @@
   }
 
   &__backdrop-filter {
-    // background-color: rgba(255, 255, 255, 0.5);
-    /* Полупрозрачность */
     backdrop-filter: blur(10px);
     position: absolute;
     top: 0;
@@ -80,32 +73,26 @@
     width: 100%;
     height: 100%;
     z-index: 100;
-    // backdrop-filter: blur(30px);
-    // animation: blurMove 8s infinite alternate ease-in-out;
     animation: blurMove 5s infinite alternate ease-in-out;
   }
 
   @keyframes blurMove {
     0% {
-      // backdrop-filter: blur(10px);
       backdrop-filter: blur(0px);
       background-position: 50% 50%;
     }
 
     25% {
-      // backdrop-filter: blur(40px);
       backdrop-filter: blur(5px);
       background-position: 52% 48%;
     }
 
     50% {
-      // backdrop-filter: blur(50px);
       backdrop-filter: blur(10px);
       background-position: 55% 46%;
     }
 
     75% {
-      // backdrop-filter: blur(40px);
       backdrop-filter: blur(5px);
       background-position: 52% 48%;
     }
@@ -183,22 +170,8 @@
 
     img {
       align-self: flex-end;
-      // transition: transform 0.3s ease;
-      // transition: transform 0.4s ease, filter 0.4s ease;
-      //   will-change: transform;
-    }
-    img:hover {
-      // transform: translateX(10px) translateY(10px);
-        /* Логотип сдвигается при наведении */
     }
   }
-
-  // &__title-wrapper:hover img {
-  //   transform: translate(-15px, -15px) scale(1.1);
-  //     /* Логотип двигается и увеличивается */
-  //     filter: brightness(1.2);
-  //     /* Добавляем эффект яркости при наведении */
-  // }
 
   &__tab-btn.btn--white-border {
     margin-right: 24px;
@@ -230,11 +203,6 @@
     align-items: flex-start;
   }
 
-  // &__tab-paragraph,
-  // &__course-program {
-  //   width: 776px;
-  // }
-
   &__tab-desc {
     width: 776px;
   }
@@ -247,11 +215,7 @@
   &__tab {
     display: none;
     width: 100%;
-    // position: absolute;
-    // top: 10px;
     left: 0;
-    // margin-top: 10px;
-    // opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.4s ease, transform 0.4s ease;
     z-index: 0;
@@ -263,20 +227,12 @@
     transform: translateY(0);
     z-index: 1;
     pointer-events: auto;
-    // opacity: 1;
   }
 }
 .fade-in {
   opacity: 1;
   transform: translateY(0);
 }
-
-// .intro__course-content {
-//   display: none;
-//   opacity: 0;
-//   transform: translateY(-10px);
-//   transition: opacity 0.3s ease, transform 0.3s ease;
-// }
 
 .intro__course-content.open {
   display: block;
@@ -286,9 +242,6 @@
 
 .intro__course-part {
   cursor: pointer;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
   margin: 0;
   margin-bottom: 5px;
 
@@ -309,7 +262,6 @@
   transform: rotate(180deg);
 }
 
-/* Скрываем контент аккордеона по умолчанию */
 .intro__course-content {
   max-height: 0;
   overflow: hidden;
@@ -317,23 +269,17 @@
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-/* Открытый аккордеон */
 .intro__course-acordeon.open .intro__course-content {
   max-height: 1000px;
-  /* Достаточно большое значение для вместимости контента */
   opacity: 1;
 }
 
-/* Стили для заголовков аккордеонов */
 .intro__course-part {
   cursor: pointer;
   display: flex;
-  // justify-content: space-between;
   align-items: center;
   padding: 12px;
   padding-left: 0;
-  // background: #f5f5f5;
-  // border: 1px solid #ddd;
   transition: background 0.2s ease;
   font-size: 30px;
   line-height: 40px;
@@ -343,19 +289,16 @@
   background: #eaeaea;
 }
 
-/* Иконка стрелки */
 .icon-drop-down {
   transition: transform 0.3s ease;
 }
 
-/* Анимация поворота стрелки при открытии */
 .intro__course-acordeon.open .icon-drop-down {
   transform: rotate(180deg);
 }
 
 .intro__course-lecture {
   display: flex;
-  // flex-direction: column;
   margin-bottom: 40px;
   align-items: center;
 
@@ -444,14 +387,12 @@
   color: #fff;
 }
 
-// Параллакс на Лого Orto
 .logo {
   transition: transform 0.3s ease;
 }
 
 .logo:hover {
   transform: translateX(10px) translateY(10px);
-  /* Логотип сдвигается при наведении */
 }
 
 @media (max-width: 1279px) {
@@ -488,7 +429,6 @@
   }
 
   .intro__tab-title {
-    // width: 700px;
     font-size: 40px;
     line-height: 40px;
     width: 100%;
@@ -540,7 +480,6 @@
   .intro__tab-btns-top,
   .intro__tab-btns-bottom {
     flex-wrap: wrap;
-    // margin-bottom: 10px;
 
     .btn {
       margin-bottom: 10px;
